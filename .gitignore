@@ -1,0 +1,13 @@
+node_modules
+package-lock.json
+.idea
+config/database/test.json
+coverage
+<<<<<<< HEAD
+.env
+logs
+logs/*
+=======
+
+.env
+>>>>>>> aaf28ac1629362d7e0c504db6cc6a3a138f07f0b
