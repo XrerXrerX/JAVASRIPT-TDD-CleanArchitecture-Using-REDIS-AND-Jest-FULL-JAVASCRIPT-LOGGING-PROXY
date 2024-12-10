@@ -1,46 +1,48 @@
-const routes = (handler) => ([
+/** @format */
+
+const routes = (handler) => [
   //cors
   {
-    method: 'POST',
-    path: '/memo',
+    method: "POST",
+    path: "/memo",
     handler: handler.postMemo,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
   {
-    method: 'GET',
-    path: '/memo',
+    method: "GET",
+    path: "/memo",
     handler: handler.getMemo,
     options: {
       cors: {
-        origin: ['*'],
+        origin: ["*"],
       },
     },
   },
   {
-    method: 'GET',
-    path: '/memo/{statustype}',
+    method: "GET",
+    path: "/memo/{statustype}",
     handler: handler.getMemostts,
     options: {
       cors: {
-        origin: ['*'],
+        origin: ["*"],
       },
     },
   },
   //cors
   {
-    method: 'DELETE',
-    path: '/memo/{idmemo}',
+    method: "DELETE",
+    path: "/memo/{idmemo}",
     handler: handler.delMemo,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
-]);
+];
 
 module.exports = routes;

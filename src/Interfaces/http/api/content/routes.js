@@ -1,136 +1,138 @@
-const routes = (handler) => ([
+/** @format */
+
+const routes = (handler) => [
   /**
- * metatag
- */
+   * metatag
+   */
   {
-    method: 'POST',
-    path: '/content/dtmttag/{iddtmeta}',
+    method: "POST",
+    path: "/content/dtmttag/{iddtmeta}",
     handler: handler.putcontentMtTagHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
   {
-    method: 'GET',
-    path: '/content/dtmttag/gtdt',
+    method: "GET",
+    path: "/content/dtmttag/gtdt",
     handler: handler.getcontentMtTagHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
   /**
- * sitemap
- */
+   * sitemap
+   */
   {
-    method: 'POST',
-    path: '/content/stmp',
+    method: "POST",
+    path: "/content/stmp",
     handler: handler.postcontentSiteMapTagHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
   {
-    method: 'POST',
-    path: '/content/stmp/{urpage}',
+    method: "POST",
+    path: "/content/stmp/{urpage}",
     handler: handler.putcontentSiteMapTagHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
   {
-    method: 'GET',
-    path: '/content/stmp',
+    method: "GET",
+    path: "/content/stmp",
     handler: handler.getcontentSiteMapTagHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
   {
-    method: 'DELETE',
-    path: '/content/stmp',
+    method: "DELETE",
+    path: "/content/stmp",
     handler: handler.delcontentSiteMapTagHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
   /**
- * general content
- */
+   * general content
+   */
   {
-    method: 'PUT',
-    path: '/content/ctgeneral/{idnmwebst}',
+    method: "PUT",
+    path: "/content/ctgeneral/{idnmwebst}",
     handler: handler.putctGeneralTagHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
   {
-    method: 'GET',
-    path: '/content/ctgeneral',
+    method: "GET",
+    path: "/content/ctgeneral",
     handler: handler.getctGeneralTagHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
   /**
- * slider
- */
+   * slider
+   */
   {
-    method: 'PUT',
-    path: '/content/ctslider/{idctsldr}',
+    method: "PUT",
+    path: "/content/ctslider/{idctsldr}",
     handler: handler.putctSliderTagHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
   {
-    method: 'GET',
-    path: '/content/ctslider',
+    method: "GET",
+    path: "/content/ctslider",
     handler: handler.getctSliderTagHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
   /**
- * social link
- */
+   * social link
+   */
   {
-    method: 'PUT',
-    path: '/content/ctlink/{idctlnk}',
+    method: "PUT",
+    path: "/content/ctlink/{idctlnk}",
     handler: handler.putctLinkTagHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
   {
-    method: 'GET',
-    path: '/content/ctlink',
+    method: "GET",
+    path: "/content/ctlink",
     handler: handler.getctLinkTagHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
@@ -138,22 +140,22 @@ const routes = (handler) => ([
    * social media
    */
   {
-    method: 'PUT',
-    path: '/content/socmed/{idctscmed}',
+    method: "PUT",
+    path: "/content/socmed/{idctscmed}",
     handler: handler.putctSocmedTagHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
   {
-    method: 'GET',
-    path: '/content/socmed',
+    method: "GET",
+    path: "/content/socmed",
     handler: handler.socmedctSocmedTagHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
@@ -161,68 +163,68 @@ const routes = (handler) => ([
    * promo
    */
   {
-    method: 'POST',
-    path: '/content/prm',
+    method: "POST",
+    path: "/content/prm",
     handler: handler.postcontentPromoTagHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
   {
-    method: 'PUT',
-    path: '/content/prm/{idctprm}',
+    method: "PUT",
+    path: "/content/prm/{idctprm}",
     handler: handler.putcontentPromoTagHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
   {
-    method: 'GET',
-    path: '/content/prm',
+    method: "GET",
+    path: "/content/prm",
     handler: handler.getcontentPromoTagHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
   {
-    method: 'DELETE',
-    path: '/content/prm/{idctprm}',
+    method: "DELETE",
+    path: "/content/prm/{idctprm}",
     handler: handler.delcontentPromoTagHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
   /**
- * status maintenace
- */
+   * status maintenace
+   */
   {
-    method: 'PUT',
-    path: '/content/sts/{idctmtncnc}',
+    method: "PUT",
+    path: "/content/sts/{idctmtncnc}",
     handler: handler.putctMTTagHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
   {
-    method: 'GET',
-    path: '/content/sts',
+    method: "GET",
+    path: "/content/sts",
     handler: handler.getctMTTagHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
-]);
+];
 
 module.exports = routes;

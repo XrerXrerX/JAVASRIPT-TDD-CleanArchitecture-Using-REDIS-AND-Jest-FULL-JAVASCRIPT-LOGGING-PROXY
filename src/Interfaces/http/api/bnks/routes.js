@@ -1,156 +1,157 @@
-const routes = (handler) => ([
+/** @format */
 
+const routes = (handler) => [
   {
-    method: 'POST',
-    path: '/banks/group',
+    method: "POST",
+    path: "/banks/group",
     handler: handler.postGroupHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
   {
-    method: 'GET',
-    path: '/banks/group',
+    method: "GET",
+    path: "/banks/group",
     handler: handler.getGroupHandler,
     options: {
       cors: {
-        origin: ['*'],
+        origin: ["*"],
       },
     },
   },
   {
-    method: 'PUT',
-    path: '/banks/group/{namegroup}',
+    method: "PUT",
+    path: "/banks/group/{namegroup}",
     handler: handler.putGroupHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
   {
-    method: 'DELETE',
-    path: '/banks/group/{idgroup}',
+    method: "DELETE",
+    path: "/banks/group/{idgroup}",
     handler: handler.delGroupHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
   {
-    method: 'POST',
-    path: '/banks/master',
+    method: "POST",
+    path: "/banks/master",
     handler: handler.postMasterHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
   {
-    method: 'PUT',
-    path: '/banks/master/{mstrbnks}',
+    method: "PUT",
+    path: "/banks/master/{mstrbnks}",
     handler: handler.putMasterHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
 
   {
-    method: 'GET',
-    path: '/banks/master',
+    method: "GET",
+    path: "/banks/master",
     handler: handler.getMasterHandler,
     options: {
       cors: {
-        origin: ['*'],
+        origin: ["*"],
       },
     },
   },
   {
-    method: 'DELETE',
-    path: '/banks/master/{idbnkmaster}',
+    method: "DELETE",
+    path: "/banks/master/{idbnkmaster}",
     handler: handler.delMasterHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
   {
-    method: 'POST',
-    path: '/banks/v2/add',
+    method: "POST",
+    path: "/banks/v2/add",
     handler: handler.postBanknwHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
   {
-    method: 'PUT',
-    path: '/banks/v2/{idbank}/{nmbank}',
+    method: "PUT",
+    path: "/banks/v2/{idbank}/{nmbank}",
     handler: handler.putBanknwHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
   {
-    method: 'PUT',
-    path: '/banks/v3/{idbank}',
+    method: "PUT",
+    path: "/banks/v3/{idbank}",
     handler: handler.putGroupBanknwHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
   {
-    method: 'GET',
-    path: '/banks/v2/{groupname}',
+    method: "GET",
+    path: "/banks/v2/{groupname}",
     handler: handler.getBanknwHandler,
     options: {
       cors: {
-        origin: ['*'],
+        origin: ["*"],
       },
     },
   },
   {
-    method: 'GET',
-    path: '/banks/exc/{groupname}',
+    method: "GET",
+    path: "/banks/exc/{groupname}",
     handler: handler.getBanknwexHandler,
     options: {
       cors: {
-        origin: ['*'],
+        origin: ["*"],
       },
     },
   },
   {
-    method: 'DELETE',
-    path: '/banks/{idbank}/{namabank}',
+    method: "DELETE",
+    path: "/banks/{idbank}/{namabank}",
     handler: handler.delBankHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
   {
-    method: 'DELETE',
-    path: '/banks/arr/{idbank}/{groupbank}',
+    method: "DELETE",
+    path: "/banks/arr/{idbank}/{groupbank}",
     handler: handler.delArrBankHandler,
     options: {
       cors: {
-        origin: ['https://bostoni.pro'],
+        origin: ["https://example.pro"],
       },
     },
   },
-]);
+];
 
 module.exports = routes;
