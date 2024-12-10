@@ -1,28 +1,30 @@
+# @format
+
 name: Continuous Deployment
- 
-on: 
+
+on:
   push:
     branches:
       - main
- 
+
 jobs:
   deploy:
     runs-on: ubuntu-22.04
- 
+
     steps:
-    - name: SSH and deploy app
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USERNAME }}
-        key: ${{ secrets.SSH_KEY }}
-        port: ${{ secrets.SSH_PORT }}
-        script: |
-          git config --global --add safe.directory ~/APISTORE
-          cd ~/APISTORE
-          ls -a
-          sudo git pull https://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@github.com/cor4kbh1neka/APISTORE.git
-          npm install
-          npm run migrate up
-          npm run migrate:test up
-          sudo pm2 restart api_sepak
+      - name: SSH and deploy app
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            git config --global --add safe.directory ~/APISTORE
+            cd ~/APISTORE
+            ls -a
+            sudo git pull https://ghp_saaaaaaaaaaa@github.com/XrerXrerX/APISTORE.git
+            npm install
+            npm run migrate up
+            npm run migrate:test up
+            sudo pm2 restart api_sepak
